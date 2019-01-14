@@ -1,6 +1,6 @@
 # Hypotheek rekentool
 
-Bereken je nieuwe maandelijkse hypotheek bedrag na extra aflossen.
+Bereken je maandelijkse hypotheek bedrag.
 
 <a href="https://hypotheek.oskarnijs.nl/">Demo</a>
 
