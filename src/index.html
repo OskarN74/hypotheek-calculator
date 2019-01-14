@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Bereken je hypotheek.">
+  <title>Hypotheek calculator</title>
+</head>
+
+  <body>
+
+    <div class="container">
+      
+      <h1 id="title">Hypotheek Calculator</h1>
+
+      <form id="loan-form">
+        <div class="row">
+          <label class="input-label" for="amount">Openstaand bedrag</label>
+          <span class="pre">€</span>
+          <input type="number" id="amount" value="">
+          <span class="post"></span>
+        </div>
+        <div class="row">
+          <label class="input-label" for="interest">Rentepercentage</label>
+          <span class="pre"></span>
+          <input type="number" id="interest" value="" step="0.01">
+          <span class="post">%</span>
+        </div>
+        <div class="row">
+          <label class="input-label" for="years">Resterende looptijd</label>
+          <span class="pre"></span>
+          <input type="number" id="years" value="" step="0.1">
+          <span class="post">Jaar</span>
+        </div>
+        <div class="row">
+          <label></label>
+          <span class="pre"></span>
+          <input type="submit" value="bereken">
+          <span class="post"></span>
+        </div>
+      </form>
+
+      <div id="results">
+        <h3>Resultaat</h3>
+        <div class="row">
+          <label>Maandbedrag</label>
+          <span class="pre">€</span>
+          <input type="number" id="monthly-payment" disabled>
+        </div>
+        <div class="row">
+          <label>Totaal bedrag</label>
+          <span class="pre">€</span>
+          <input type="number" id="total-payment" disabled>
+        </div>
+        <div class="row">
+          <label>Totale rente</label>
+          <span class="pre">€</span>
+          <input type="number" id="total-interest" disabled>
+        </div>
+      </div>
+
+    </div>
+    
+  </body>
+</html>
