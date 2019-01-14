@@ -2,7 +2,7 @@
 
 Bereken je maandelijkse hypotheek bedrag.
 
-<a href="https://hypotheek.oskarnijs.nl/">Demo</a>
+<a href="https://hypotheekcalculator.oskarnijs.nl/">Demo</a>
 
 ## Project setup
 ```
