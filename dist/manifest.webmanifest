@@ -1,0 +1,21 @@
+{
+  "short_name": "Hypotheek",
+  "name": "Hypotheek Calculator",
+  "description": "Bereken makkelijk je hypotheek lasten.",
+  "start_url": "/index.html",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "theme_color": "#288f09",
+  "icons": [
+    {
+      "src": "/img/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

@@ -12,11 +12,14 @@ body{
   background-color: #e5e5e5;
 }
 .container{
+  margin: 0 auto;
+  max-width:768px;
+  padding: 1rem;
+}
+#app{
   background-color: #ffffff;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.25);
-  margin: 1rem auto;
   padding:0 0 1rem 0;
-  max-width:320px;
 }
 h1{
   text-align:center;
@@ -32,7 +35,7 @@ h3{
 #loan-form, #results{
   margin: 1rem;
 }
-#results{
+#results .hidden{
   display: none;
 }
 
@@ -61,19 +64,22 @@ input[type=number]{
   border:0;
   border-bottom:1px solid #333;
   flex-grow: 1;
+  -moz-appearance:textfield;
 }
 input[type=number]:focus{
   outline:none;
   border:0;
   border-bottom:1px solid #333;
-  background-color: #cef0ff;
+  background-color: #e0f1df;
+  -moz-appearance:number-input;
 }
-input[type=number]:disabled{
-  border: 0;
+#results .result{
   background-color: #f5f5f5;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  width:120px;
+  flex-grow: 1;
+  text-align:right;
+  padding: 0.5rem;
 }
 input[type=submit]{
   flex-grow:1;
@@ -88,4 +94,25 @@ input[type=submit]{
   border-radius: 2px;
   color: #a12525;
   background-color:#ffe3e3;
+}
+
+@media all and (max-width: 767px){
+  body{
+    background-color:#ffffff;
+  }
+  .container{
+    margin:0;
+    padding:0;
+  }
+  #app{
+    box-shadow: none;
+  }
+}
+@media all and (min-width:600px){
+  #flex{
+    display:flex;
+  }
+  #loan-form, #results{
+    width:50%;
+  }
 }

@@ -11,8 +11,8 @@ export class UI {
     this.totalInterest = document.getElementById('total-interest')
     // error related
     this.errorDiv = document.createElement('div')
-    this.card = document.querySelector('.container')
-    this.loanForm = document.querySelector('#loan-form')
+    this.app = document.querySelector('#app')
+    this.flex = document.querySelector('#flex')
   }
   get input () {
     return {
@@ -22,21 +22,23 @@ export class UI {
     }
   }
   showResults (r) {
-    this.results.style.display = 'block'
-    this.monthlyPayment.value = r.monthly
-    this.totalPayment.value = r.total
-    this.totalInterest.value = r.interest
+    const rows = this.results.querySelectorAll('.row')
+    rows.forEach(row => row.classList.remove('hidden'))
+    this.monthlyPayment.innerHTML = r.monthly.toLocaleString('nl-NL', { style: 'currency', currency: 'EUR' })
+    this.totalPayment.innerHTML = r.total.toLocaleString('nl-NL', { style: 'currency', currency: 'EUR' })
+    this.totalInterest.innerHTML = r.interest.toLocaleString('nl-NL', { style: 'currency', currency: 'EUR' })
   }
   resetResults () {
-    this.results.style.display = 'none'
-    this.monthlyPayment.value = ''
-    this.totalPayment.value = ''
-    this.totalInterest.value = ''
+    const rows = this.results.querySelectorAll('.row')
+    rows.forEach(row => row.classList.add('hidden'))
+    this.monthlyPayment.innerHTML = ''
+    this.totalPayment.innerHTML = ''
+    this.totalInterest.innerHTML = ''
   }
   showError (e) {
     this.errorDiv.className = 'alert alert-danger'
     this.errorDiv.appendChild(document.createTextNode(e))
-    this.card.insertBefore(this.errorDiv, this.loanForm)
+    this.app.insertBefore(this.errorDiv, this.flex)
     setTimeout(this.clearError, 3000)
   }
   clearError () {

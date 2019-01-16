@@ -12,9 +12,9 @@ export class HypotheekCalculator {
     const monthly = (principal * x * calculatedInterest) / (x - 1)
     if (isFinite(monthly)) {
       return {
-        monthly: monthly.toFixed(0),
-        total: (monthly * calculatedPayments).toFixed(0),
-        interest: ((monthly * calculatedPayments) - principal).toFixed(0)
+        monthly: +monthly.toFixed(2),
+        total: +(monthly * calculatedPayments).toFixed(2),
+        interest: +((monthly * calculatedPayments) - principal).toFixed(2)
       }
     } else {
       return new Error('Controleer de ingevoerde getallen, er ging iets mis!')
