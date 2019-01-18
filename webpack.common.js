@@ -18,7 +18,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-    new WorkboxPlugin.GenerateSW(),
     new MiniCssExtractPlugin({
       filename: './css/[name].min.css'
     }),
@@ -41,7 +40,12 @@ module.exports = {
       { from: 'src/manifest.webmanifest', to: '[name].[ext]' },
       { from: 'src/favicon.ico', to: '[name].[ext]' },
       { from: 'src/img/*', to: 'img/[name].[ext]' }
-    ])
+    ]),
+    new WorkboxPlugin.GenerateSW({
+      skipWaiting: true,
+      clientsClaim: true,
+      exclude: [/\.webmanifest$/]
+    })
   ],
   module: {
     rules: [
