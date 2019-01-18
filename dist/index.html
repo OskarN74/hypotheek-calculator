@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Description" content="Bereken je hypotheek.">
-  <meta name="theme-color" content="#288f09">
+  <meta name="theme-color" content="#00953b">
   <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title>Hypotheek calculator</title>
 <link href="./css/hypocalc.min.css" rel="stylesheet"></head>
 
@@ -14,50 +16,54 @@
 
     <div class="container">
       
-      <div id="app">
-        <h1 id="title">Hypotheek Calculator</h1>
+      <div id="app" class="app">
 
-        <div id="flex">
-          <form id="loan-form">
-            <h3>Hypotheek</h3>
+        <h1 id="title" class="title">Hypotheek Calculator</h1>
+
+        <div id="flex" class="flex">
+
+          <form id="loan-form" class="loanform">
+            <h3 class="subheader">Hypotheek</h3>
             <div class="row">
-              <label class="input-label" for="amount">Openstaand bedrag</label>
-              <span class="pre">€</span>
+              <label class="label" for="amount">Openstaand bedrag</label>
+              <span class="pref">€</span>
               <input type="number" id="amount" value="">
             </div>
             <div class="row">
-              <label class="input-label" for="interest">Rentepercentage</label>
-              <span class="pre"></span>
+              <label class="label" for="interest">Rentepercentage</label>
+              <span class="pref"></span>
               <input type="number" id="interest" value="" step="0.01">
             </div>
             <div class="row">
-              <label class="input-label" for="years">Resterende looptijd</label>
-              <span class="pre"></span>
+              <label class="label" for="years">Resterende looptijd</label>
+              <span class="pref"></span>
               <input type="number" id="years" value="" step="0.1">
             </div>
             <div class="row">
-              <label></label>
-              <span class="pre"></span>
-              <input type="submit" value="bereken">
+              <label class="label"></label>
+              <span class="pref"></span>
+              <input type="submit" class="btn btn--green" value="bereken">
             </div>
           </form>
 
-          <div id="results">
-            <h3>Kosten</h3>
-            <div class="row hidden">
-              <label>Maandbedrag</label>
-              <div id="monthly-payment" class="result"></div>
+          <div id="results" class="results">
+            <h3 class="subheader">Kosten</h3>
+            <div class="row row--hidden">
+              <label class="label">Maandbedrag</label>
+              <div id="monthly-payment" class="showresult"></div>
             </div>
-            <div class="row hidden">
-              <label>Totaal bedrag</label>
-              <div id="total-payment" class="result"></div>
+            <div class="row row--hidden">
+              <label class="label">Totaal bedrag</label>
+              <div id="total-payment" class="showresult"></div>
             </div>
-            <div class="row hidden">
-              <label>Totale rente</label>
-              <div id="total-interest" class="result"></div>
+            <div class="row row--hidden">
+              <label class="label">Totale rente</label>
+              <div id="total-interest" class="showresult"></div>
             </div>
           </div>
+
         </div>
+
       </div>
     </div>
     
