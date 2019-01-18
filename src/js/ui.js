@@ -23,20 +23,20 @@ export class UI {
   }
   showResults (r) {
     const rows = this.results.querySelectorAll('.row')
-    rows.forEach(row => row.classList.remove('hidden'))
+    rows.forEach(row => row.classList.remove('row--hidden'))
     this.monthlyPayment.innerHTML = r.monthly.toLocaleString('nl-NL', { style: 'currency', currency: 'EUR' })
     this.totalPayment.innerHTML = r.total.toLocaleString('nl-NL', { style: 'currency', currency: 'EUR' })
     this.totalInterest.innerHTML = r.interest.toLocaleString('nl-NL', { style: 'currency', currency: 'EUR' })
   }
   resetResults () {
     const rows = this.results.querySelectorAll('.row')
-    rows.forEach(row => row.classList.add('hidden'))
+    rows.forEach(row => row.classList.add('row--hidden'))
     this.monthlyPayment.innerHTML = ''
     this.totalPayment.innerHTML = ''
     this.totalInterest.innerHTML = ''
   }
   showError (e) {
-    this.errorDiv.className = 'alert alert-danger'
+    this.errorDiv.className = 'alert alert--danger'
     this.errorDiv.appendChild(document.createTextNode(e))
     this.app.insertBefore(this.errorDiv, this.flex)
     setTimeout(this.clearError, 3000)
