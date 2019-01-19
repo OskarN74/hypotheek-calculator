@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "65abbcd87f731d9f7366",
+    "revision": "171874d19ee32a522f4c",
     "url": "./css/hypocalc.min.css"
   },
   {
-    "revision": "65abbcd87f731d9f7366",
+    "revision": "171874d19ee32a522f4c",
     "url": "./js/hypocalc.bundle.js"
   },
   {
