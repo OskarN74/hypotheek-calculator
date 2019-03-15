@@ -11,15 +11,15 @@ module.exports = {
     hypocalc: './src/js/index.js'
   },
   output: {
-    filename: './js/[name].bundle.js',
+    filename: './js/[name].[contentHash].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/template.html'
     }),
     new MiniCssExtractPlugin({
-      filename: './css/[name].min.css'
+      filename: './css/[name].[hash].min.css'
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.min\.css$/g,
